@@ -24,11 +24,11 @@ export const metadata: Metadata = {
     title: "JCWPP - API WhatsApp Não Oficial | Automatize seu Atendimento",
     description:
       "Automatize seu atendimento e vendas com a API WhatsApp JCWPP. Planos flexíveis, integração com Make e suporte dedicado para empresas.",
-    url: "https://jcwpp-lp.jcdev.com.br/",
+    url: "https://jcwpp.jcdev.com.br/",
     siteName: "JCWPP",
     images: [
       {
-        url: "https://jcwpp-lp.jcdev.com.br/jc-wpp.png",
+        url: "https://jcwpp.jcdev.com.br/jc-wpp.png",
         width: 1200,
         height: 630,
         alt: "JCWPP - API WhatsApp para empresas",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: "JCWPP - API WhatsApp Não Oficial | Automatize seu Atendimento",
     description:
       "Automatize seu atendimento e vendas com a API WhatsApp JCWPP. Planos flexíveis, integração com Make e suporte dedicado para empresas.",
-    images: ["https://jcwpp-lp.jcdev.com.br/jc-wpp.png"],
+    images: ["https://jcwpp.jcdev.com.br/jc-wpp.png"],
     site: "@jcdevbr",
   },
   icons: {
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://jcwpp-lp.jcdev.com.br/",
+    canonical: "https://jcwpp.jcdev.com.br/",
   },
 };
 

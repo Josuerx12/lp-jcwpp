@@ -60,7 +60,7 @@ const MobileNav = () => {
             Contato
           </a>
           <Link
-            href="https://jcwpp.jcdev.com.br/auth/login"
+            href="https://app-jcwpp.jcdev.com.br/auth/login"
             className="bg-green-600 text-white px-6 py-3 rounded-xl text-xl hover:bg-green-700 transition"
             onClick={handleClose}
           >

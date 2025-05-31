@@ -30,7 +30,7 @@ const Hero = () => {
         aria-label="Ações principais"
       >
         <Link
-          href="https://jcwpp.jcdev.com.br/auth/login"
+          href="https://app-jcwpp.jcdev.com.br/auth/login"
           target="_blank"
           rel="noopener"
           className="inline-flex items-center gap-2 bg-white text-green-700 font-semibold py-3 px-6 rounded-lg shadow hover:bg-gray-100 transition"

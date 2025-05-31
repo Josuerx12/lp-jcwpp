@@ -36,7 +36,7 @@ const Header = () => {
           Contato
         </a>
         <Link
-          href="https://jcwpp.jcdev.com.br/auth/login"
+          href="https://app-jcwpp.jcdev.com.br/auth/login"
           className="ml-4 bg-green-600 text-white px-4 py-2 rounded-xl hover:bg-green-700 transition flex items-center gap-2"
           aria-label="Área do cliente"
         >
