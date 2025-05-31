@@ -4,7 +4,7 @@ import Plans from "@/components/Plans";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "JCWPP - API WhatsApp Não Oficial | Automatize seu Atendimento",
+  title: "JCWPP - API WhatsApp | Automatize seu Atendimento",
   description:
     "Automatize, integre e otimize o WhatsApp da sua empresa com a JCWPP. Planos acessíveis, integração fácil com Make e suporte 24 horas para seu negócio crescer.",
   keywords: [

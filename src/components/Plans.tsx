@@ -35,12 +35,17 @@ const Plans = () => {
               {plan.name}
             </h3>
             <p
-              className="text-green-600 text-3xl font-extrabold"
-              aria-label={`Preço do plano ${plan.name}`}
+              className="text-green-600 text-3xl font-extrabold flex items-baseline justify-center gap-1"
+              aria-label={`Preço do plano ${plan.name}: ${plan.price} por mês`}
             >
               {plan.price}
+              <span
+                className="text-base font-medium text-gray-600 ml-1"
+                aria-hidden="true"
+              >
+                /mês
+              </span>
             </p>
-
             <ul
               className="mt-6 space-y-3 text-left"
               aria-label={`Benefícios do plano ${plan.name}`}

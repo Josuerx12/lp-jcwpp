@@ -10,9 +10,7 @@ const Header = () => {
       className="w-full flex items-center justify-between py-4 px-6 bg-white shadow-md sticky top-0 z-50"
       role="banner"
     >
-      <Link href="#hero" aria-label="Página inicial">
-        <Logo />
-      </Link>
+      <Logo />
 
       <nav
         aria-label="Menu principal"
