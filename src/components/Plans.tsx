@@ -40,7 +40,6 @@ const Plans = () => {
             >
               {plan.price}
             </p>
-            <p className="mt-2 text-sm">{plan.instances}</p>
 
             <ul
               className="mt-6 space-y-3 text-left"
