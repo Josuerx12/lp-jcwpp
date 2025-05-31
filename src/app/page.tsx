@@ -1,103 +1,186 @@
-import Image from "next/image";
+import Link from "next/link";
+import {
+  CheckCircle,
+  Zap,
+  MessageCircle,
+  InfinityIcon,
+  ShieldCheck,
+  Rocket,
+} from "lucide-react";
 
-export default function Home() {
+const plans = [
+  {
+    name: "Plano Básico",
+    price: "R$79,99",
+    instances: "1 Instância",
+    benefits: [
+      {
+        icon: <CheckCircle className="text-green-600 w-5 h-5" />,
+        text: "1 Instância exclusiva",
+      },
+      {
+        icon: <MessageCircle className="text-green-600 w-5 h-5" />,
+        text: "Suporte via WhatsApp em horário comercial",
+      },
+      {
+        icon: <Zap className="text-green-600 w-5 h-5" />,
+        text: "Integração com Make",
+      },
+      {
+        icon: <ShieldCheck className="text-green-600 w-5 h-5" />,
+        text: "Documentação completa",
+      },
+    ],
+    featured: false,
+  },
+  {
+    name: "Plano Profissional",
+    price: "R$199,99",
+    instances: "3 Instâncias",
+    benefits: [
+      {
+        icon: <CheckCircle className="text-green-600 w-5 h-5" />,
+        text: "3 Instâncias simultâneas",
+      },
+      {
+        icon: <MessageCircle className="text-green-600 w-5 h-5" />,
+        text: "Suporte via WhatsApp 24h",
+      },
+      {
+        icon: <Zap className="text-green-600 w-5 h-5" />,
+        text: "Integração com Make e APIs personalizadas",
+      },
+      {
+        icon: <ShieldCheck className="text-green-600 w-5 h-5" />,
+        text: "Monitoramento ativo das instâncias",
+      },
+    ],
+    featured: true,
+  },
+  {
+    name: "Plano Ilimitado",
+    price: "R$399,99",
+    instances: "Instâncias Ilimitadas",
+    benefits: [
+      {
+        icon: <InfinityIcon className="text-green-600 w-5 h-5" />,
+        text: "Instâncias Ilimitadas para escalar sem limites",
+      },
+      {
+        icon: <MessageCircle className="text-green-600 w-5 h-5" />,
+        text: "Suporte VIP 24h via WhatsApp e email",
+      },
+      {
+        icon: <Zap className="text-green-600 w-5 h-5" />,
+        text: "Prioridade máxima no suporte técnico",
+      },
+      {
+        icon: <Rocket className="text-green-600 w-5 h-5" />,
+        text: "Acesso antecipado a novas funcionalidades",
+      },
+    ],
+    featured: false,
+  },
+];
+
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-100 text-gray-900">
+      {/* HERO */}
+      <section className="text-center py-20 bg-gradient-to-r from-green-500 to-green-700 text-white">
+        <h1 className="animate-fade-in text-5xl font-extrabold mb-4">
+          Automatize com a JCWPP
+        </h1>
+        <p className="animate-fade-in max-w-2xl mx-auto text-lg">
+          A API não oficial do WhatsApp mais completa. Planos flexíveis, suporte
+          dedicado e integração fácil com Make.
+        </p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className="mt-8 animate-fade-in flex flex-col md:flex-row justify-center gap-4">
+          <Link
+            href="/login"
+            className="inline-block  bg-white text-green-700 font-semibold py-3 px-6 rounded-lg shadow hover:bg-gray-100 transition"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
+            Já sou cliente
+          </Link>
           <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://wa.me/SEUNUMERO"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
+            className="inline-block  border border-white text-white font-semibold py-3 px-6 rounded-lg hover:bg-white hover:text-green-700 transition"
           >
-            Read our docs
+            Falar com Consultor
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+      </section>
+
+      {/* PLANOS */}
+      <section className="container mx-auto py-20 px-4 animate-fade-in">
+        <h2 className="text-4xl font-bold text-center mb-12">
+          Escolha seu Plano
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {plans.map((plan) => (
+            <div
+              key={plan.name}
+              className={`relative bg-white shadow-lg rounded-2xl p-8 text-center transition transform hover:-translate-y-2 hover:shadow-2xl ${
+                plan.featured ? "border-4 border-green-600" : ""
+              }`}
+            >
+              {plan.featured && (
+                <span className="absolute top-4 right-4 bg-green-600 text-white text-xs px-2 py-1 rounded-full">
+                  Mais Vendido
+                </span>
+              )}
+              <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+              <p className="text-green-600 text-3xl font-extrabold">
+                {plan.price}
+              </p>
+              <p className="mt-2 text-sm">{plan.instances}</p>
+
+              <ul className="mt-6 space-y-3 text-left">
+                {plan.benefits.map((benefit, idx) => (
+                  <li key={idx} className="flex items-center">
+                    {benefit.icon}
+                    <span className="ml-2">{benefit.text}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                href="https://wa.me/SEUNUMERO"
+                target="_blank"
+                rel="noopener"
+                className={`block ${
+                  plan.featured && "animate-bounce"
+                } mt-6 bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition`}
+              >
+                Assinar Agora
+              </a>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA FINAL */}
+      <section className="bg-green-700 text-white text-center py-16 px-4">
+        <h2 className="text-3xl font-bold mb-4 animate-fade-in">
+          Pronto para transformar sua comunicação?
+        </h2>
+        <p className="mb-6 animate-fade-in">
+          Entre em contato com nosso consultor e descubra a melhor solução para
+          sua empresa.
+        </p>
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://wa.me/SEUNUMERO"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener"
+          className="inline-block animate-fade-in bg-white text-green-700 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
+          Fale com um Consultor
         </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+    </main>
   );
 }
